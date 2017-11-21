@@ -1,0 +1,38 @@
+#GTECH Template. Visit go/calvin for more information.
+
+# User friendly name for your project.
+project: dcm_bulk_onboarding
+
+# List of ldaps for users involved in developing the solution.
+authors:
+  - ycklai
+
+# See go/calvin-file for more options
+type: Replicable
+
+# See go/calvin-file for more options
+status: Complete
+
+description: >
+    Bulk tasks for onboarding DCM customers inclduing creating [subaccounts],
+    [advertiser groups], [advertisers], and assigning
+    parent advertisers (by assiging floodlight configuration ids
+
+# A link to an image for your solution.
+#logo:
+
+# Links to resources for your project. PRD, G3Doc, PLX, etc...
+links:
+  - name: Templat
+     url: go/dcm-bulk-onboarding
+
+#metrics:
+#  - name:
+#    value:
+#    description:
+
+# Free form list. See go/solution-fingerprint for suggested classifiers.
+tags:
+  - DCM
+  - Bulk tasks
+  - Onboarding
