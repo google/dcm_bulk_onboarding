@@ -1,6 +1,6 @@
 # **DCM Bulk Onboarding Tool**
 
-A tool to perform bulk tasks to onboard DCM accounts using DCM API.
+An example tool to perform bulk tasks to onboard DCM accounts using DCM API.
 
 ## OVERVIEW
 
