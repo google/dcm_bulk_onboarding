@@ -42,7 +42,6 @@ function onOpen() {
  * the sheet
  */
 function getUserRolePermissions() {
-  _megadashTracking();
   sendGA("getUserRolePermissions");
 
   var sheet = _setupUserRolePermissionsSheet();
@@ -73,7 +72,6 @@ function getUserRolePermissions() {
  * through floodlight configurations, print it out on the sheet
  */
 function getAllAdvertisers() {
-  _megadashTracking();
   sendGA("getAllAdvertisers");
   const profile_id = _fetchProfileId();
   var advertisersList = DoubleClickCampaigns.Advertisers
@@ -107,7 +105,6 @@ function getAllAdvertisers() {
  * in the DCM account
  */
 function bulkCreateSubaccounts() {
-  _megadashTracking();
   sendGA("bulkCreateSubaccounts");
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(SUBACCOUNTS_SHEET);
@@ -148,7 +145,6 @@ function bulkCreateSubaccounts() {
  * create them in the DCM account
  */
 function bulkCreateAdvertiserGroups() {
-  _megadashTracking();
   sendGA("bulkCreateAdvertiserGroups");
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(ADV_GROUP_SHEET);
@@ -188,7 +184,6 @@ function bulkCreateAdvertiserGroups() {
  * in the DCM account
  */
 function bulkCreateAdvertisers() {
-  _megadashTracking();
   sendGA("bulkCreateAdvertisers");
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(ADV_SHEET);
@@ -235,7 +230,6 @@ function bulkCreateAdvertisers() {
  * bulk update them in the DCM account
  */
 function bulkUpdateAdvertiserFC() {
-  _megadashTracking();
   sendGA("bulkUpdateAdvertiserFC");
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(FL_CONFIG_SHARE_SHEET);
@@ -263,5 +257,3 @@ function bulkUpdateAdvertiserFC() {
     }
   }
 }
-
-

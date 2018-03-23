@@ -68,15 +68,6 @@ function initializeSheet_(sheetName, lock) {
 }
 
 /**
- * Function to track internal usage
- */
-function _megadashTracking() {
-  var url = "https://megadash.googleplex.com/tracking/5215380526858240";
-  var response = UrlFetchApp.fetch(url);
-  console.log(response.getContentText());
-}
-
-/**
  * Function to track all (internal/external) usage
  * @param {string} page tracked
  */
@@ -235,4 +226,3 @@ function _setupFlConfigShareSheet() {
   sheet.getRange("A1:H1").setFontWeight("bold").setWrap(true);
   return sheet;
 }
-
