@@ -68,38 +68,6 @@ function initializeSheet_(sheetName, lock) {
 }
 
 /**
- * Function to track all (internal/external) usage
- * @param {string} page tracked
- */
-function sendGA(page) {
-  var cid = Utilities.base64EncodeWebSafe(Utilities.computeDigest(
-      Utilities.DigestAlgorithm.SHA_256,
-      SpreadsheetApp.getActiveSpreadsheet().getSheetId()));
-  try {
-    var data = {
-      'v': '1',
-      'tid': 'UA-108224588-1',
-      'z': Math.floor(Math.random()*10E7),
-      't':'pageview',
-      'dl': SpreadsheetApp.getActiveSpreadsheet().getUrl() + '/' + page,
-      'cid': cid
-    };
-    var payload = Object.keys(data).map(
-      function(key) {
-        return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
-      }
-    ).join('&');
-    var options = {
-      'method' : 'POST',
-      'payload' : payload
-    };
-    UrlFetchApp.fetch('http://www.google-analytics.com/collect', options);
-  } catch (err) {
-    Logger.log(err);
-  }
-}
-
-/**
  * Initialize all tabs and their header rows
  */
 function setupTabs() {
